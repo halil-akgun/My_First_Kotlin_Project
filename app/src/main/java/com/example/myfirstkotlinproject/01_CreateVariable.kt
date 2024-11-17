@@ -19,8 +19,6 @@ fun main() {
     var productQuantity: Int = 10
     var productDescription: String = "A high-performance laptop for work and play."
 
-    println(productName)
-    println(productPrice)
-    println(productQuantity)
-    println(productDescription)
+    // using variable in string
+    println("The price of $productName is $productPrice")
 }
