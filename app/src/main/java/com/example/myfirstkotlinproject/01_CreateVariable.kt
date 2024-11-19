@@ -14,9 +14,9 @@ fun main() {
 
 
     // variable declaration with type
-    val productName: String = "Laptop"
-    val productPrice: Double = 1000.0
-    val productQuantity: Int = 10
+    var productName: String = "Laptop"
+    var productPrice: Double = 1000.0
+    var productQuantity: Int = 10
 
     // using variable in string
     println("The price of $productName is $productPrice")
