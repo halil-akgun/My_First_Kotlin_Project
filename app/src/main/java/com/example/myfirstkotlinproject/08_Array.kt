@@ -66,9 +66,15 @@ fun main() {
     println(array.sortedArrayDescending().contentToString()) // 9, 5, 4, 3, 1, 0
 }
 
+// generic function
 fun <T> printArray(array: Array<T>) {
     for (i in array) {
         print("$i ")
     }
     println()
+
+    // use index in for loop
+    for ((idx, i) in array.withIndex()) {
+        println("index: $idx, value: $i")
+    }
 }
