@@ -19,6 +19,7 @@ fun main() {
     }
 
 
+    // some ready methods
     val ceil = ceil(3.14) // 4.0
     val floor = floor(3.14) // 3.0
     val sqrt = sqrt(9.0) // 3.0
