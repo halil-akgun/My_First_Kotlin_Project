@@ -1,4 +1,4 @@
-package com.example.myfirstkotlinproject
+package com.myfirstkotlinproject
 
 import kotlin.math.abs
 import kotlin.math.ceil

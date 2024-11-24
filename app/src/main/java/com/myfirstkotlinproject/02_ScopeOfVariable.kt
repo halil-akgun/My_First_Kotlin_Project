@@ -1,4 +1,4 @@
-package com.example.myfirstkotlinproject
+package com.myfirstkotlinproject
 
 fun main() {
     var scopeOfVariable = ScopeOfVariable()

@@ -1,4 +1,4 @@
-package com.example.myfirstkotlinproject
+package com.myfirstkotlinproject
 
 fun main() {
     val array = arrayOf(3, 0, 5, 4, 9, 1) // 3, 0, 5, 4, 9, 1
