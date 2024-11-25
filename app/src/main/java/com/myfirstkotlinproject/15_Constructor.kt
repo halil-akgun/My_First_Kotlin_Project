@@ -1,7 +1,7 @@
 package com.myfirstkotlinproject
 
 fun main() {
-    val person = Person("John", 30)
+    val person = Person("Halil", 30)
     println(person)
 }
 
