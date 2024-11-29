@@ -28,4 +28,8 @@ fun main() {
     // insert an element at a specific index
     strings1.add(1, "World")
     println(strings1) // [Hello, World, ...]
+
+    for ((index, value) in strings1.withIndex()) {
+        println("index: $index, value: $value")
+    }
 }
