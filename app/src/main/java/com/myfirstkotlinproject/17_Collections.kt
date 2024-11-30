@@ -32,4 +32,12 @@ fun main() {
     for ((index, value) in strings1.withIndex()) {
         println("index: $index, value: $value")
     }
+
+
+    // sortedWith function
+    val people = listOf(Person2("Alice", 30), Person2("Bob", 25), Person2("Charlie", 40), Person2("Dave", 35))
+    val sortedPeople = people.sortedWith(compareBy(Person2::age, Person2::name)) // sorted by age then name
+    sortedPeople.forEach { println("name: ${it.name}, age: ${it.age}") }
 }
+
+class Person2(val name: String, val age: Int)
