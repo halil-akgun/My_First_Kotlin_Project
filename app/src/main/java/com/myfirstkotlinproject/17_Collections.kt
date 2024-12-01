@@ -34,10 +34,28 @@ fun main() {
     }
 
 
+    val people = ArrayList<Person2>()
+    people.add(Person2("John", 30))
+    people.add(Person2("Alice", 25))
+    people.add(Person2("Bob", 35))
+    people.add(Person2("Jane", 20))
+    people.add(Person2("Tom", 40))
+
     // sortedWith function
-    val people = listOf(Person2("Alice", 30), Person2("Bob", 25), Person2("Charlie", 40), Person2("Dave", 35))
-    val sortedPeople = people.sortedWith(compareBy(Person2::age, Person2::name)) // sorted by age then name
+    println("********** sorted by age: ********** ")
+    val sortedPeople =
+        people.sortedWith(compareBy(Person2::age, Person2::name)) // sorted by age then name
     sortedPeople.forEach { println("name: ${it.name}, age: ${it.age}") }
+
+    // filter function
+    println("********** filter by age > 25: ********** ")
+    val filtered = people.filter { it.age > 25 }
+    filtered.forEach { println("name: ${it.name}, age: ${it.age}") }
+
+    // increase age of all people by 1
+    println("********** increase age by 1: ********** ")
+    people.forEach { it.age++ }
+    people.forEach { println("name: ${it.name}, age: ${it.age}") }
 }
 
-class Person2(val name: String, val age: Int)
+class Person2(var name: String, var age: Int)
