@@ -57,6 +57,17 @@ fun main() {
     println("********** increase age by 1: ********** ")
     people.forEach { it.age++ }
     people.forEach { println("name: ${it.name}, age: ${it.age}") }
+
+
+    // Set
+    val set1 = setOf(1, 2, 3, 4, 5)
+    val set2 = setOf(3, 4, 5, 6, 7)
+    val union = set1.union(set2)
+    val intersection = set1.intersect(set2)
+    val difference = set1.minus(set2)
+    println("union: $union") // {1, 2, 3, 4, 5, 6, 7}
+    println("intersection: $intersection") // {3, 4, 5}
+    println("difference: $difference") // {1, 2}
 }
 
 class Person2(var name: String, var age: Int)
