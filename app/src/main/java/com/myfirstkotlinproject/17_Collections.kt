@@ -43,18 +43,18 @@ fun main() {
     people.add(Person2("Tom", 40))
 
     // sortedWith function
-    println("********** sorted by age: ********** ")
+    println("********** sorted by age: **********")
     val sortedPeople =
         people.sortedWith(compareBy(Person2::age, Person2::name)) // sorted by age then name
     sortedPeople.forEach { println("name: ${it.name}, age: ${it.age}") }
 
     // filter function
-    println("********** filter by age > 25: ********** ")
+    println("********** filter by age > 25: **********")
     val filtered = people.filter { it.age > 25 }
     filtered.forEach { println("name: ${it.name}, age: ${it.age}") }
 
     // increase age of all people by 1
-    println("********** increase age by 1: ********** ")
+    println("********** increase age by 1: **********")
     people.forEach { it.age++ }
     people.forEach { println("name: ${it.name}, age: ${it.age}") }
 
