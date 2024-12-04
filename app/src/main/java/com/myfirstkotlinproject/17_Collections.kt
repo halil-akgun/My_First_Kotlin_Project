@@ -84,4 +84,11 @@ class Person2(var id: Int, var name: String, var age: Int) {
     override fun hashCode(): Int {
         return this.id
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (other is Person2) {
+            return this.id == other.id
+        }
+        return false
+    }
 }
