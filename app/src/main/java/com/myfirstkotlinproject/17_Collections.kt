@@ -36,11 +36,11 @@ fun main() {
 
 
     val people = ArrayList<Person2>()
-    people.add(Person2("John", 30))
-    people.add(Person2("Alice", 25))
-    people.add(Person2("Bob", 35))
-    people.add(Person2("Jane", 20))
-    people.add(Person2("Tom", 40))
+    people.add(Person2(1, "John", 30))
+    people.add(Person2(2, "Alice", 25))
+    people.add(Person2(3, "Bob", 35))
+    people.add(Person2(4, "Jane", 20))
+    people.add(Person2(5, "Tom", 40))
 
     // sortedWith function
     println("********** sorted by age: **********")
@@ -60,6 +60,7 @@ fun main() {
 
 
     // Set
+    println("********** HashSet **********")
     val set1 = setOf(1, 2, 3, 4, 5)
     val set2 = setOf(3, 4, 5, 6, 7)
     val union = set1.union(set2)
@@ -68,6 +69,19 @@ fun main() {
     println("union: $union") // {1, 2, 3, 4, 5, 6, 7}
     println("intersection: $intersection") // {3, 4, 5}
     println("difference: $difference") // {1, 2}
+
+    val peopleSet = HashSet<Person2>()
+    peopleSet.add(Person2(1, "John", 30))
+    peopleSet.add(Person2(2, "Alice", 25))
+    peopleSet.add(Person2(3, "Bob", 35))
+    peopleSet.add(Person2(4, "Jane", 20))
+    peopleSet.add(Person2(4, "Tom", 40)) // Tom will be ignored because it has the same id as Jane
+
+    println(peopleSet.size) // 4
 }
 
-class Person2(var name: String, var age: Int)
+class Person2(var id: Int, var name: String, var age: Int) {
+    override fun hashCode(): Int {
+        return this.id
+    }
+}
