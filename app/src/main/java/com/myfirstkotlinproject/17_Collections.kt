@@ -78,6 +78,21 @@ fun main() {
     peopleSet.add(Person2(4, "Tom", 40)) // Tom will be ignored because it has the same id as Jane
 
     println(peopleSet.size) // 4
+
+
+    // Map
+    val map = mapOf("key1" to 1, "key2" to 2, "key3" to 3)
+    println(map["key1"]) // 1
+
+    val mutableMap = mutableMapOf("key1" to 1, "key2" to 2, "key3" to 3)
+    mutableMap["key1"] = 10
+    println(mutableMap["key1"]) // 10
+
+    val hashMap = HashMap<String, Int>()
+    hashMap["key1"] = 1
+    hashMap.put("key2", 2)
+    hashMap.put("key1", 10) // key1 will be overwritten
+    println(hashMap["key1"]) // 10
 }
 
 class Person2(var id: Int, var name: String, var age: Int) {
