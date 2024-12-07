@@ -7,7 +7,7 @@ fun main() {
     thread2.start()
 
     for (i in 300..333) {
-        println("Main Thread: $i")
+        println("##### Main Thread: $i")
         Thread.sleep(100)
     }
 }
@@ -16,7 +16,7 @@ fun main() {
 class Thread1 : Thread() {
     override fun run() {
         for (i in 100..133) {
-            println("Thread 1: $i")
+            println("----- Thread 1: $i")
             sleep(100)
         }
     }
@@ -26,7 +26,7 @@ class Thread1 : Thread() {
 class Thread2 : Runnable {
     override fun run() {
         for (i in 200..233) {
-            println("Thread 2: $i")
+            println("///// Thread 2: $i")
             Thread.sleep(155)
         }
     }
